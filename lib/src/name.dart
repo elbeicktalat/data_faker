@@ -12,6 +12,8 @@ class Name {
     this.startWith = '',
     this.endWith = '',
     this.textCase,
+    this.maxChar,
+    this.minChar,
   }) {
     try {
       getName();
@@ -19,6 +21,8 @@ class Name {
   }
 
   final int? charCount;
+  final int? maxChar;
+  final int? minChar;
   late String? name;
   final String? startWith;
   final String? endWith;
@@ -28,7 +32,8 @@ class Name {
 
   String getName() {
     data.names.forEach((name) {
-      if (name.length == charCount) {
+      if (name.length == charCount ||
+          name.length <= maxChar! && name.length >= minChar!) {
         if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
           switch (textCase) {
             case TextCase.upper:

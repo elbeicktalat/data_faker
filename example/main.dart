@@ -2,9 +2,8 @@ import 'package:data_faker/data_faker.dart';
 
 void main() {
   print(Name(
-    charCount: 6,
-    startWith: 'H',
-    endWith: 'y',
+    maxChar: 10,
+    minChar: 9,
     textCase: TextCase.lower,
   ).name);
 }
