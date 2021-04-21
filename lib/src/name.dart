@@ -12,8 +12,8 @@ class Name {
     this.startWith = '',
     this.endWith = '',
     this.textCase,
-    this.maxChar,
-    this.minChar,
+    this.maxChar = 10,
+    this.minChar = 0,
   }) {
     try {
       getName();
