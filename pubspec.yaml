@@ -1,5 +1,5 @@
 name: data_faker
-description:
+description: A dart library for generating a fake data.
 version: 0.0.1
 homepage: https://github.com/elbeicktalat/data_faker
 
