@@ -31,7 +31,7 @@ class Name {
   ///[maxChar] It allows you to get a name with the max characters count or under it.
   /// example: to get **alexander** maxChar should be 9,
   /// also it can give you **alex** or any name has no more character than 9.
-  final int? maxChar;
+  int? maxChar;
 
   ///[minChar] It allows you to get a name with the min characters count or upper it.
   /// example: to get **alex** minChar should be 4,
@@ -72,6 +72,9 @@ class Name {
   }
 
   void generateName(String name) {
+    if (maxChar == 0) {
+      maxChar = minChar;
+    }
     if (charCount != null && name.length == charCount ||
         name.length <= maxChar! && name.length >= minChar!) {
       if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
