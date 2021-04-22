@@ -19,7 +19,9 @@ class Name {
   }) {
     try {
       getName();
-    } catch (e) {}
+    } catch (e) {
+      print(e);
+    }
   }
 
   ///[charCount] It will give you a name with this specific character long
