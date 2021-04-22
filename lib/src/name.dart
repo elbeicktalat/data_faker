@@ -1,11 +1,7 @@
 import 'dart:math';
+import 'package:data_faker/utils/gender.dart';
 import 'package:data_faker/utils/text_case.dart';
 import 'package:data_faker/data/data.dart' as data show names;
-
-enum Gender {
-  male,
-  female,
-}
 
 class Name {
   Name({
