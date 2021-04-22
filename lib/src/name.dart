@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'package:data_faker/src/utils/text_case.dart';
+import 'package:data_faker/utils/text_case.dart';
 import 'package:data_faker/data/data.dart' as data show names;
 
 class Name {
