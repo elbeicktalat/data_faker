@@ -10,11 +10,12 @@ enum Gender {
 class Name {
   Name({
     this.charCount,
+    this.minChar = 0,
+    this.maxChar = 0,
     this.startWith = '',
     this.endWith = '',
+    this.contains = '',
     this.textCase,
-    this.maxChar = 0,
-    this.minChar = 0,
     this.gender,
   }) {
     try {
@@ -45,6 +46,9 @@ class Name {
 
   ///[endWith] It allows you to get a specifec name which finish with 'Z'.
   final String? endWith;
+
+  ///[contains] It allows you to get a specifec name which contain 'any'.
+  final String? contains;
 
   ///[textCase] It help you to get a name with specificing his case,
   ///you have tow cases one is the lowar => **max** the second is upper **MAX**
@@ -77,16 +81,18 @@ class Name {
     }
     if (charCount != null && name.length == charCount ||
         name.length <= maxChar! && name.length >= minChar!) {
-      if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
-        switch (textCase) {
-          case TextCase.upper:
-            _names.add(name.toUpperCase());
-            break;
-          case TextCase.lower:
-            _names.add(name.toLowerCase());
-            break;
-          default:
-            _names.add(name);
+      if (name.contains(contains!)) {
+        if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
+          switch (textCase) {
+            case TextCase.upper:
+              _names.add(name.toUpperCase());
+              break;
+            case TextCase.lower:
+              _names.add(name.toLowerCase());
+              break;
+            default:
+              _names.add(name);
+          }
         }
       }
     }
