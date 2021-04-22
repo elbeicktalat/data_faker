@@ -25,12 +25,12 @@ class Name {
   final int? charCount;
 
   ///[maxChar] It allows you to get a name with the max characters count or under it.
-  /// example: to get **alexander** maxChar should be 9 or 10,
-  /// also it can give you **alex** or any name has no more character than 10.
+  /// example: to get **alexander** maxChar should be 9,
+  /// also it can give you **alex** or any name has no more character than 9.
   final int? maxChar;
 
   ///[minChar] It allows you to get a name with the min characters count or upper it.
-  /// example: to get **alex** minChar should be 3 or 4,
+  /// example: to get **alex** minChar should be 4,
   /// also it can give you **alexander** or any name has more character than 4.
   final int? minChar;
 
@@ -69,6 +69,7 @@ class Name {
         }
       }
     });
+    print(_names);
     return this.name = _names.elementAt(_random.nextInt(_names.length));
   }
 }
