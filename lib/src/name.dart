@@ -35,7 +35,7 @@ class Name {
   /// also it can give you **alexander** or any name has more character than 4.
   final int? minChar;
 
-  late String? name;
+  late String name;
 
   ///[startWith] It allows you to get a specifec name which initial with 'A'.
   final String? startWith;
