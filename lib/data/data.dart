@@ -1,1 +1,1 @@
-export 'package:data_faker/data/res/nams.dart';
+export 'package:data_faker/data/res/names.dart';
