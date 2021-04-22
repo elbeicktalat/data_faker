@@ -1,5 +1,5 @@
 # data_faker
-[![Pub Version](https://img.shields.io/pub/v/auth_buttons?color=blue&logo=dart)](https://pub.dev/packages/data_faker)
+[![Pub Version](https://img.shields.io/pub/v/data_faker?&logo=dart)](https://pub.dev/packages/data_faker)
 
 A dart library for generating a fake data.
 
