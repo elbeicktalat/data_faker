@@ -53,8 +53,9 @@ class Name {
 
   String getName() {
     data.names.forEach((name) {
-      if (name.length == charCount ||
-          name.length <= maxChar! && name.length >= minChar!) {
+      if (name.length == charCount &&
+          name.length <= maxChar! &&
+          name.length >= minChar!) {
         if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
           switch (textCase) {
             case TextCase.upper:
