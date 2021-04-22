@@ -71,7 +71,6 @@ class Name {
       default:
         getMaleName();
     }
-    print(_names);
     return this.name = _names.elementAt(_random.nextInt(_names.length));
   }
 
