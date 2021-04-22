@@ -13,7 +13,7 @@ class Name {
     this.startWith = '',
     this.endWith = '',
     this.textCase,
-    this.maxChar = 10,
+    this.maxChar = 0,
     this.minChar = 0,
     this.gender,
   }) {
