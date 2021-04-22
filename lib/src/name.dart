@@ -2,6 +2,11 @@ import 'dart:math';
 import 'package:data_faker/utils/text_case.dart';
 import 'package:data_faker/data/data.dart' as data show names;
 
+enum Gender {
+  male,
+  female,
+}
+
 class Name {
   Name({
     this.charCount,
@@ -10,6 +15,7 @@ class Name {
     this.textCase,
     this.maxChar = 10,
     this.minChar = 0,
+    this.gender,
   }) {
     try {
       getName();
@@ -43,12 +49,28 @@ class Name {
   ///also you have the default one without passing anythink => **Max**.
   final TextCase? textCase;
 
+  ///[gender] allow you to get a name by gender.
+  Gender? gender;
+
   ///[_names] storage the names after filterlizeing it.
   final List<String> _names = [];
   final Random _random = Random();
 
   String getName() {
-    data.names.forEach((name) {
+    switch (gender) {
+      case Gender.female:
+        getFemaleName();
+        break;
+      case Gender.male:
+      default:
+        getMaleName();
+    }
+    print(_names);
+    return this.name = _names.elementAt(_random.nextInt(_names.length));
+  }
+
+  void getMaleName() {
+    data.names.first.forEach((name) {
       if (name.length == charCount &&
           name.length <= maxChar! &&
           name.length >= minChar!) {
@@ -66,7 +88,26 @@ class Name {
         }
       }
     });
-    print(_names);
-    return this.name = _names.elementAt(_random.nextInt(_names.length));
+  }
+
+  void getFemaleName() {
+    data.names.last.forEach((name) {
+      if (name.length == charCount &&
+          name.length <= maxChar! &&
+          name.length >= minChar!) {
+        if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
+          switch (textCase) {
+            case TextCase.upper:
+              _names.add(name.toUpperCase());
+              break;
+            case TextCase.lower:
+              _names.add(name.toLowerCase());
+              break;
+            default:
+              _names.add(name);
+          }
+        }
+      }
+    });
   }
 }
