@@ -56,7 +56,7 @@ class Name {
   final TextCase? textCase;
 
   ///[gender] allow you to get a name by gender.
-  Gender? gender;
+  final Gender? gender;
 
   ///[_names] storage the names after filterlizeing it.
   final List<String> _names = [];
