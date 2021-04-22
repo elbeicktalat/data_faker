@@ -71,43 +71,33 @@ class Name {
     return this.name = _names.elementAt(_random.nextInt(_names.length));
   }
 
-  void getMaleName() {
-    data.names.first.forEach((name) {
-      if (charCount != null && name.length == charCount ||
-          name.length <= maxChar! && name.length >= minChar!) {
-        if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
-          switch (textCase) {
-            case TextCase.upper:
-              _names.add(name.toUpperCase());
-              break;
-            case TextCase.lower:
-              _names.add(name.toLowerCase());
-              break;
-            default:
-              _names.add(name);
-          }
+  void generateName(String name) {
+    if (charCount != null && name.length == charCount ||
+        name.length <= maxChar! && name.length >= minChar!) {
+      if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
+        switch (textCase) {
+          case TextCase.upper:
+            _names.add(name.toUpperCase());
+            break;
+          case TextCase.lower:
+            _names.add(name.toLowerCase());
+            break;
+          default:
+            _names.add(name);
         }
       }
+    }
+  }
+
+  void getMaleName() {
+    data.names.first.forEach((name) {
+      generateName(name);
     });
   }
 
   void getFemaleName() {
     data.names.last.forEach((name) {
-      if (charCount != null && name.length == charCount ||
-          name.length <= maxChar! && name.length >= minChar!) {
-        if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
-          switch (textCase) {
-            case TextCase.upper:
-              _names.add(name.toUpperCase());
-              break;
-            case TextCase.lower:
-              _names.add(name.toLowerCase());
-              break;
-            default:
-              _names.add(name);
-          }
-        }
-      }
+      generateName(name);
     });
   }
 }
