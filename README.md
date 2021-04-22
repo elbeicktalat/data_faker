@@ -1,14 +1,13 @@
 # data_faker
 [![Pub Version](https://img.shields.io/pub/v/data_faker?&logo=dart)](https://pub.dev/packages/data_faker)
 
-A dart library for generating a fake data.
-
+A dart library for generating a fake data. This library make your life easier, also it's very customizable.
 
 ## Installation
 1) Add this to your packages pubspec.yaml file:
 ```yaml
 dependencies:
-  auth_buttons: ^0.0.1
+  auth_buttons: ^0.0.2
 ```
 2) Install it 
 You can install it from the command line:
