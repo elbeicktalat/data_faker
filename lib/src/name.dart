@@ -71,9 +71,8 @@ class Name {
 
   void getMaleName() {
     data.names.first.forEach((name) {
-      if (name.length == charCount &&
-          name.length <= maxChar! &&
-          name.length >= minChar!) {
+      if (charCount != null && name.length == charCount ||
+          name.length <= maxChar! && name.length >= minChar!) {
         if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
           switch (textCase) {
             case TextCase.upper:
@@ -92,9 +91,8 @@ class Name {
 
   void getFemaleName() {
     data.names.last.forEach((name) {
-      if (name.length == charCount &&
-          name.length <= maxChar! &&
-          name.length >= minChar!) {
+      if (charCount != null && name.length == charCount ||
+          name.length <= maxChar! && name.length >= minChar!) {
         if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
           switch (textCase) {
             case TextCase.upper:
