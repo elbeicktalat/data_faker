@@ -1,4 +1,4 @@
-import 'package:data_faker/src/random.dart';
+import 'package:data_faker/src/random_generator.dart';
 import 'package:data_faker/utils/gender.dart';
 import 'package:data_faker/utils/text_case.dart';
 import 'package:data_faker/data/data.dart' as data show names;
