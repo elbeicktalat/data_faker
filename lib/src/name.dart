@@ -4,7 +4,7 @@ import 'package:data_faker/utils/text_case.dart';
 import 'package:data_faker/data/data.dart' as data show names;
 
 class Name {
-  Name({
+  const Name({
     this.charCount,
     this.minChar = 0,
     this.maxChar = 0,
@@ -13,13 +13,7 @@ class Name {
     this.contains = '',
     this.textCase,
     this.gender,
-  }) {
-    try {
-      getName();
-    } catch (e) {
-      print(e);
-    }
-  }
+  });
 
   ///[charCount] It will give you a name with this specific character long
   ///exactly the same example: to get **Oliver** char Count should be 6;
@@ -28,14 +22,12 @@ class Name {
   ///[maxChar] It allows you to get a name with the max characters count or under it.
   /// example: to get **alexander** maxChar should be 9,
   /// also it can give you **alex** or any name has no more character than 9.
-  int? maxChar;
+  final int? maxChar;
 
   ///[minChar] It allows you to get a name with the min characters count or upper it.
   /// example: to get **alex** minChar should be 4,
   /// also it can give you **alexander** or any name has more character than 4.
   final int? minChar;
-
-  late String name;
 
   ///[startWith] It allows you to get a specifec name which initial with 'A'.
   final String? startWith;
@@ -54,26 +46,24 @@ class Name {
   ///[gender] allow you to get a name by gender.
   final Gender? gender;
 
-  ///[_names] storage the names after filterlizeing it.
-  final List<String> _names = [];
-  final Random _random = Random();
+  String get name => _getName();
 
-  String getName() {
+  String _getName() {
+    ///[_names] storage the names after filterlizeing it.
+    final List<String> _names = [];
+    final Random _random = Random();
     switch (gender) {
       case Gender.female:
-        getFemaleName();
+        _getFemaleName(_names);
         break;
       case Gender.male:
       default:
-        getMaleName();
+        _getMaleName(_names);
     }
-    return this.name = _names.elementAt(_random.nextInt(_names.length));
+    return _names.elementAt(_random.nextInt(_names.length));
   }
 
-  void generateName(String name) {
-    if (maxChar == 0) {
-      maxChar = minChar;
-    }
+  void _generateName(String name, List<String> _names) {
     if (charCount != null && name.length == charCount ||
         name.length <= maxChar! && name.length >= minChar!) {
       if (name.contains(contains!)) {
@@ -93,15 +83,15 @@ class Name {
     }
   }
 
-  void getMaleName() {
+  void _getMaleName(List<String> _names) {
     data.names.first.forEach((name) {
-      generateName(name);
+      _generateName(name, _names);
     });
   }
 
-  void getFemaleName() {
+  void _getFemaleName(List<String> _names) {
     data.names.last.forEach((name) {
-      generateName(name);
+      _generateName(name, _names);
     });
   }
 }
