@@ -1,7 +1,7 @@
 import 'package:data_faker/src/random_generator.dart';
 import 'package:data_faker/utils/gender.dart';
 import 'package:data_faker/utils/text_case.dart';
-import 'package:data_faker/data/data.dart' as data show names;
+import 'package:data_faker/data/names.dart' as data;
 
 class Name {
   const Name({
@@ -84,13 +84,13 @@ class Name {
   }
 
   void _getMaleName(List<String> _names) {
-    data.names.first.forEach((name) {
+    data.maleNames.forEach((name) {
       _generateName(name, _names);
     });
   }
 
   void _getFemaleName(List<String> _names) {
-    data.names.last.forEach((name) {
+    data.femaleNames.forEach((name) {
       _generateName(name, _names);
     });
   }

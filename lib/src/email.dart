@@ -1,4 +1,4 @@
-import 'package:data_faker/data/res/email_domain.dart';
+import 'package:data_faker/data/email_domain.dart';
 import 'package:data_faker/src/name.dart';
 import 'package:data_faker/src/random_generator.dart';
 import 'package:data_faker/utils/text_case.dart';

@@ -1,8 +1,3 @@
-List<List<String>> names = [
-  maleNames,
-  femaleNames,
-];
-
 const List<String> maleNames = [
   'Oliver',
   'George',
