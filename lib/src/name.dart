@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'package:data_faker/src/random.dart';
 import 'package:data_faker/utils/gender.dart';
 import 'package:data_faker/utils/text_case.dart';
 import 'package:data_faker/data/data.dart' as data show names;
@@ -51,7 +51,7 @@ class Name {
   String _getName() {
     ///[_names] storage the names after filterlizeing it.
     final List<String> _names = [];
-    final Random _random = Random();
+    final RandomGenerator _random = RandomGenerator();
     switch (gender) {
       case Gender.female:
         _getFemaleName(_names);
@@ -60,7 +60,7 @@ class Name {
       default:
         _getMaleName(_names);
     }
-    return _names.elementAt(_random.nextInt(_names.length));
+    return _random.elementFromList(_names);
   }
 
   void _generateName(String name, List<String> _names) {
