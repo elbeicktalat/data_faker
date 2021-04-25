@@ -3,7 +3,7 @@ List<List<String>> names = [
   femaleNames,
 ];
 
-List<String> maleNames = [
+const List<String> maleNames = [
   'Oliver',
   'George',
   'Harry',
@@ -106,7 +106,7 @@ List<String> maleNames = [
   'Jamie',
 ];
 
-List<String> femaleNames = [
+const List<String> femaleNames = [
   'Olivia',
   'Emma',
   'Ava',

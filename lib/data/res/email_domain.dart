@@ -1,4 +1,4 @@
-List<String> emailDomains = [
+const List<String> emailDomains = [
   '@gmail.com',
   '@yahoo.com',
   '@outlook.com',

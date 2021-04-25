@@ -4,14 +4,22 @@ import 'package:data_faker/src/name.dart';
 import 'package:data_faker/utils/text_case.dart';
 
 class Email {
-  Email() {
-    email = _name.name +
-        emailDomains.elementAt(_random.nextInt(emailDomains.length));
-  }
+  const Email({
+    this.name = const Name(maxChar: 10, textCase: TextCase.lower),
+    this.domains = emailDomains,
+  });
 
-  //Todo: get email by gender.
-  //Todo: get email by character count
-  String? email;
-  Random _random = Random();
-  Name _name = Name(maxChar: 10, textCase: TextCase.lower);
+  ///[name] an object of Name class which make you able to control the name.
+  final Name? name;
+
+  ///[domains] a list of Strings which make you able to pass a specific domains.
+  final List<String> domains;
+
+  ///[email] is the result of this class, for sure is an email;
+  String get email => _getEmail();
+
+  String _getEmail() {
+    Random random = Random();
+    return name!.name + domains.elementAt(random.nextInt(domains.length));
+  }
 }
