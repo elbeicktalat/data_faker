@@ -1,6 +1,6 @@
 name: data_faker
 description: A dart library for generating a fake data. This library make your life easier, also it's very customizable.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/elbeicktalat/data_faker
 
 environment:
