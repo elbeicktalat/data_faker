@@ -107,7 +107,7 @@ List<Currency> currencies = [
   Currency('Malawian kwacha', 'MK', 'MWK', 'Tambala'),
   Currency('Malaysian ringgit', 'RM', 'MYR', 'Sen'),
   Currency('Maldivian rufiyaa', '.ރ', 'MVR', 'Laari'),
-  Currency('Mauritanian ouguiya', 'UM' 'MRU' 'Khoums'),
+  Currency('Mauritanian ouguiya', 'UM', 'MRU', 'Khoums'),
   Currency('Mauritian rupee', '₨', 'MUR', 'Cent'),
   Currency('Mexican peso', '\$', 'MXN', 'Centavo'),
   Currency('Moldovan leu', 'L', 'MDL', 'Ban'),

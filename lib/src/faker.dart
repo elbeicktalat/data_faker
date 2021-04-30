@@ -1,5 +1,7 @@
+import 'package:data_faker/data/currencies.dart';
 import 'package:data_faker/data/email_domain.dart';
 import 'package:data_faker/data/names.dart';
+import 'package:data_faker/models/currency.dart';
 import 'package:data_faker/src/random_generator.dart';
 
 ///[Faker] a quick way to get fake data without ability to customise it,
@@ -18,6 +20,12 @@ class Faker {
     return name.toLowerCase() + _random.elementFromList(emailDomains);
   }
 
+  static String _currency() {
+    final Currency _randomCurrency = _random.elementFromList(currencies);
+    return _randomCurrency.name + ' ' + _randomCurrency.symbol!;
+  }
+
   static String get name => _name();
   static String get email => _email();
+  static String get currency => _currency();
 }
