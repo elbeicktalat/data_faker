@@ -1,5 +1,8 @@
+import 'package:meta/meta.dart';
+
+@immutable
 class City {
-  City(
+  const City(
     this.name, [
     this.area,
     this.elevation,
@@ -8,10 +11,10 @@ class City {
     this.postalCode,
   ]);
 
-  String name;
-  double? area;
-  double? elevation;
-  double? population;
-  String? timeZone;
-  String? postalCode;
+  final String name;
+  final double? area;
+  final double? elevation;
+  final double? population;
+  final String? timeZone;
+  final String? postalCode;
 }

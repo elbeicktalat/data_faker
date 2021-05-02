@@ -1,6 +1,6 @@
 import 'package:data_faker/models/address/city.dart';
 
-List<City> capitalCities = [
+const List<City> capitalCities = [
   City('Kabul'),
   City('Tirana'),
   City('Algiers'),
@@ -97,7 +97,7 @@ Lobamba (legislative royal).
   City('Tehran'),
   City('Baghdad'),
   City('Dublin'),
-  City('Jerusalem'),
+  City('Tel Aviv, Jerusalem'),
   City('Rome'),
   City('Kingston'),
   City('Tokyo'),
@@ -149,7 +149,7 @@ Lobamba (legislative royal).
   City('Muscat'),
   City('Islamabad'),
   City('Ngerulmud'),
-  City('Jerusalem'),
+  City('Ramallah, Jerusalem'),
   City('Panama'),
   City('Port Moresby'),
   City('Asunción'),
