@@ -1,3 +1,5 @@
+import 'package:data_faker/data/cities.dart';
+import 'package:data_faker/data/countries.dart';
 import 'package:data_faker/data/currencies.dart';
 import 'package:data_faker/data/email_domain.dart';
 import 'package:data_faker/data/names.dart';
@@ -25,7 +27,26 @@ class Faker {
     return _randomCurrency.name + ' ' + _randomCurrency.symbol!;
   }
 
+  static String _country() {
+    return _random.elementFromList(countries);
+  }
+
+  static String _city() {
+    return _random.elementFromList(capitalCities).name;
+  }
+
+  ///[name] give you random male name.
   static String get name => _name();
+
+  ///[email] give you random email with a male user name.
   static String get email => _email();
+
+  ///[currency] give you a random currency with his symbol.
   static String get currency => _currency();
+
+  ///[city] give you a random capital city.
+  static String get city => _city();
+
+  ///[country] give you a random country.
+  static String get country => _country();
 }
