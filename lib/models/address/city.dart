@@ -11,10 +11,20 @@ class City {
     this.postalCode,
   ]);
 
+  ///[name] define the city name.
   final String name;
-  final double? area;
-  final double? elevation;
-  final double? population;
+
+  ///[area] define the city area.
+  final String? area;
+
+  ///[elevation] defines the elevation of the city from the sea level.
+  final String? elevation;
+
+  ///[population] defines the population count.
+  final String? population;
+
   final String? timeZone;
+
+  ///[postalCode] defines the postal code.
   final String? postalCode;
 }
