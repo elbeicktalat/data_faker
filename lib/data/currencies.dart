@@ -1,6 +1,6 @@
 import 'package:data_faker/models/currency.dart';
 
-List<Currency> currencies = [
+const List<Currency> currencies = [
   Currency('United States dollar', '\$', 'USD', 'Cent'),
   Currency('Euro', '€', 'EUR', 'Cent'),
   Currency('Abkhazian apsar'),

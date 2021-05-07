@@ -1,9 +1,7 @@
 import 'package:data_faker/models/address/city.dart';
 import 'package:data_faker/models/address/utils.dart';
 import 'package:data_faker/models/currency.dart';
-import 'package:meta/meta.dart';
 
-@immutable
 class Country {
   const Country({
     required this.name,
