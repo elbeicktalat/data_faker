@@ -9,7 +9,7 @@ A dart library for generating a fake data. This library make your life easier, a
 1) Add this to your packages pubspec.yaml file:
 ```yaml
 dependencies:
-  auth_buttons: ^0.0.3
+  auth_buttons: ^0.0.4
 ```
 2) Install it 
 You can install it from the command line:
