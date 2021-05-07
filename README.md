@@ -43,3 +43,12 @@ This is not the same for the second one, here you getting data without any custo
 
 You'll get one of those names [leo, max, kai], 
 if you are using `VSCode` hover over parameters will show you a simple documentation of this parameter, if you're using `Android Studio` click on `ctrl + Q` on `windows` on `Mac` click `command + Q`.
+
+## Faker
+```dart
+  print(Faker.name); // random male name.
+  print(Faker.email); // random email with male name.
+  print(Faker.currency); // random currency with it name and symbol.
+  print(Faker.city); // random capital city.
+  print(Faker.country); // random country.
+```
