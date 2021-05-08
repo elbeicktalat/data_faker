@@ -2,6 +2,7 @@
 
 [![Dart](https://github.com/elbeicktalat/data_faker/actions/workflows/dart.yml/badge.svg)](https://github.com/elbeicktalat/data_faker/actions/workflows/dart.yml)
 [![Pub Version](https://img.shields.io/pub/v/data_faker?&logo=dart)](https://pub.dev/packages/data_faker)
+[![Github Stars](https://img.shields.io/github/stars/elbeicktalat/data_faker?logo=github)](https://github.com/elbeicktalat/data_faker)
 
 A dart library for generating a fake data. This library make your life easier, also it's very customizable.
 
