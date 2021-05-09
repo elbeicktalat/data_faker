@@ -47,8 +47,8 @@ class Lorem {
   ///[maxChar] count of a maximum characters in **word**.
   late final int? maxChar;
 
-  ///[lorem] get the generated lorem.
-  String get lorem => _getLorem();
+  ///[text] Get the generated lorem as text.
+  String get text => _getLorem();
 
   String _getLorem() {
     List<String> _lorems = [];
