@@ -2,6 +2,9 @@ import 'package:data_faker/data/cities.dart';
 import 'package:data_faker/data/countries.dart';
 import 'package:data_faker/data/currencies.dart';
 import 'package:data_faker/data/email_domain.dart';
+import 'package:data_faker/data/lorem/lorem_paragraphs.dart';
+import 'package:data_faker/data/lorem/lorem_sentences.dart';
+import 'package:data_faker/data/lorem/lorem_words.dart';
 import 'package:data_faker/data/names.dart';
 import 'package:data_faker/models/currency.dart';
 import 'package:data_faker/src/random_generator.dart';
@@ -35,6 +38,18 @@ class Faker {
     return _random.elementFromList(capitalCities).name;
   }
 
+  static String _loremWord() {
+    return _random.elementFromList(words);
+  }
+
+  static String _loremSentence() {
+    return _random.elementFromList(sentences);
+  }
+
+  static String _loremParagraph() {
+    return _random.elementFromList(paragraphs);
+  }
+
   ///[name] give you random male name.
   static String get name => _name();
 
@@ -49,4 +64,13 @@ class Faker {
 
   ///[country] give you a random country.
   static String get country => _country();
+
+  ///[word] gives a random lorem word.
+  static String get word => _loremWord();
+
+  ///[sentence] gives a random lorem sentence.
+  static String get sentence => _loremSentence();
+
+  ///[paragraph] gives a random lorem paragraph.
+  static String get paragraph => _loremParagraph();
 }
