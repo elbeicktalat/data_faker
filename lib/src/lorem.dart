@@ -3,7 +3,7 @@ import 'package:data_faker/data/lorem/lorem_sentences.dart';
 import 'package:data_faker/data/lorem/lorem_words.dart';
 import 'package:data_faker/src/random_generator.dart';
 
-enum LoremType {
+enum _LoremType {
   paragraph,
   sentence,
   word,
@@ -13,19 +13,19 @@ class Lorem {
   Lorem.paragraph({
     this.minWord,
     this.maxWord,
-  }) : _loremType = LoremType.paragraph;
+  }) : _loremType = _LoremType.paragraph;
 
   Lorem.sentence({
     this.minWord,
     this.maxWord,
-  }) : _loremType = LoremType.sentence;
+  }) : _loremType = _LoremType.sentence;
 
   Lorem.word({
     this.minChar,
     this.maxChar,
-  }) : _loremType = LoremType.word;
+  }) : _loremType = _LoremType.word;
 
-  final LoremType _loremType;
+  final _LoremType _loremType;
 
   ///[minWord] count of a minimum words in **paragraph** or **sentence**.
   late final int? minWord;
@@ -45,13 +45,13 @@ class Lorem {
     List<String> _lorems = [];
     final RandomGenerator random = RandomGenerator();
     switch (_loremType) {
-      case LoremType.paragraph:
+      case _LoremType.paragraph:
         _getParagraph(_lorems);
         break;
-      case LoremType.sentence:
+      case _LoremType.sentence:
         _getSentence(_lorems);
         break;
-      case LoremType.word:
+      case _LoremType.word:
         _getWord(_lorems);
         break;
       default:
