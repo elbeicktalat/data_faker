@@ -26,9 +26,17 @@ class Lorem {
   }) : _loremType = LoremType.word;
 
   final LoremType _loremType;
+
+  ///[minWord] count of a minimum words in **paragraph** or **sentence**.
   late final int? minWord;
+
+  ///[maxWord] count of a maximum words in **paragraph** or **sentence**.
   late final int? maxWord;
+
+  ///[minChar] count of a minimum characters in **word**.
   late final int? minChar;
+
+  ///[maxChar] count of a maximum characters in **word**.
   late final int? maxChar;
 
   String get lorem => _getLorem();
