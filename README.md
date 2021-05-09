@@ -10,7 +10,7 @@ A dart library for generating a fake data. This library make your life easier, a
 1) Add this to your packages pubspec.yaml file:
 ```yaml
 dependencies:
-  auth_buttons: ^0.0.4
+  auth_buttons: ^0.0.5
 ```
 2) Install it 
 You can install it from the command line:
@@ -52,4 +52,7 @@ if you are using `VSCode` hover over parameters will show you a simple documenta
   print(Faker.currency); // random currency with it name and symbol.
   print(Faker.city); // random capital city.
   print(Faker.country); // random country.
+  print(Faker.paragraph); // random paragraph.
+  print(Faker.sentence); // random sentence.
+  print(Faker.word); // random word.
 ```
