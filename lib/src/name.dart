@@ -64,8 +64,8 @@ class Name {
   }
 
   void _generateName(String name, List<String> _names) {
-    if (charCount != null && name.length == charCount ||
-        name.length <= maxChar! && name.length >= minChar!) {
+    if (charCount != null && charCount == name.length ||
+        minChar! <= name.length && maxChar! >= name.length) {
       if (name.contains(contains!)) {
         if (name.startsWith(startWith!) && name.endsWith(endWith!)) {
           switch (textCase) {
