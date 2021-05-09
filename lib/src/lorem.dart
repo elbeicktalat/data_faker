@@ -9,17 +9,25 @@ enum _LoremType {
   word,
 }
 
+///[Lorem] helps you with text stuff it gives you a text in multiple forms
+/// such as word, sentence, paragraph.
 class Lorem {
+  ///[Lorem.paragraph()] Gives you a paragraph by specifying
+  /// the minimum and the maximum words count.
   Lorem.paragraph({
     this.minWord,
     this.maxWord,
   }) : _loremType = _LoremType.paragraph;
 
+  ///[Lorem.sentence()] Gives you a sentence by specifying
+  /// the minimum and the maximum words count.
   Lorem.sentence({
     this.minWord,
     this.maxWord,
   }) : _loremType = _LoremType.sentence;
 
+  ///[Lorem.word()] Gives you a word by specifying
+  /// the minimum and the maximum characters count.
   Lorem.word({
     this.minChar,
     this.maxChar,
@@ -39,6 +47,7 @@ class Lorem {
   ///[maxChar] count of a maximum characters in **word**.
   late final int? maxChar;
 
+  ///[lorem] get the generated lorem.
   String get lorem => _getLorem();
 
   String _getLorem() {
