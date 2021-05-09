@@ -1,3 +1,7 @@
+## [0.0.5] - 09 May 2021
+- Get Lorem Word.
+- Get Lorem sentence.
+- Get Lorem paragraph.
 ## [0.0.4] - 07 May 2021
 - Get Country with `Faker`.
 - Get Capital Cities with `Faker`.
